@@ -7,16 +7,16 @@
     @since 27/01/2024
     @version 1.0
     @param nOper, 
-    @Description: PONTO DE ENTRADA PARA EXECU«√O AP”S OPERA«√O NO PEDIDO DE VENDA 
+    @Description: PONTO DE ENTRADA PARA EXECU√á√ÉO AP√ìS OPERA√á√ÉO NO PEDIDO DE VENDA 
 
-Par‚metros:
-nOper --> Tipo: NumÈrico - DescriÁ„o: OperaÁ„o que est· sendo executada, sendo:
+Par√¢metros:
+nOper --> Tipo: Num√©rico - Descri√ß√£o: Opera√ß√£o que est√° sendo executada, sendo:
 
-3 - Inclus„o
-4 - AlteraÁ„o
-5 - Exclus„o
-6 - CÛpia
-7 - DevoluÁ„o de Compras
+3 - Inclus√£o
+4 - Altera√ß√£o
+5 - Exclus√£o
+6 - C√≥pia
+7 - Devolu√ß√£o de Compras
 
 */
 
@@ -26,8 +26,10 @@ User Function M410STTS()
 	Local nOper := ParamIXB[1]
 
 	If  (nOper == 5)
+
+		// Grava√ß√£o de usu√°rio da exclus√£o do pedido com data e hora
 	
-		CMsg := AllTrim(C5_ZZOBSE) + "Usu·rio da Exclus„o do Pedido.: " + cValToChar(UsrRetName(__cUserID)) + " " ;
+		CMsg := AllTrim(C5_ZZOBSE) + "Usu√°rio da Exclus√£o do Pedido.: " + cValToChar(UsrRetName(__cUserID)) + " " ;
 									  + cValToChar(Date()) + " " + cValToChar(Time() + Chr(13) + Chr(10))
 
 				dbSelectArea('SC5')
